@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Currency Converter</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Currency Converter</h1>
+        <div id="result">
+            <div id="conversionDescription"></div> 
+            <div id="conversionValue"></div>
+        </div>
+        <p id="timestamp"></p>
+        <div class="converter">
+          <div class="fields">
+              <div class="field">
+                  <input type="number" id="amount1" value="1" oninput="convertCurrency(1)">
+                  <select id="fromCurrency" onchange="convertCurrency(1)"></select>
+              </div>
+              <div class="field">
+                  <input type="number" id="amount2" oninput="convertCurrency(2)">
+                  <select id="toCurrency" onchange="convertCurrency(1)"></select>
+              </div>
+          </div>
+          <button id="switchButton" onclick="switchCurrencies()">
+            <img src="currency-exchange-svgrepo-com.svg"/>
+          </button>
+      </div>
+        <div id="error"></div>
+    </div>
+    <script src="app.js" ></script>
+</body>
+</html>
